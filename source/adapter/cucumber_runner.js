@@ -55,7 +55,7 @@
       },
 
       runStepDefinition: function runStepDefinition(stepDefinition) {
-        stepDefinition(self.supportCodeHelper);
+        stepDefinition.call(self.supportCodeHelper, self.supportCodeHelper);
       },
 
       prettyFormatterLogger: function prettyFormatterLogger(cucumberLog) {

@@ -340,7 +340,9 @@ process.nextTick = (function () {
     ;
 
     if (canSetImmediate) {
-        return window.setImmediate;
+        return function(args){
+		window.setImmediate.apply(window, args);
+	}
     }
 
     if (canPost) {

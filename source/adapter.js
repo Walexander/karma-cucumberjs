@@ -24,7 +24,9 @@
           window.angular &&
           window.angular.mock &&
           typeof window.angular.mock.dump === 'function') ? true:false;
-      }
+      },
+
+      noop: function(){}
     };
 
     karma.start = self.start;

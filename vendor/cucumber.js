@@ -340,8 +340,8 @@ process.nextTick = (function () {
     ;
 
     if (canSetImmediate) {
-        return function(args){
-		window.setImmediate.apply(window, args);
+        return function(fn){
+		window.setImmediate.call(window, fn);
 	}
     }
 

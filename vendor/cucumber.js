@@ -4151,7 +4151,8 @@ require.define("/cucumber/support_code/library",function(require,module,exports,
     defineStep       : self.defineStep,
     registerListener : self.registerListener,
     registerHandler  : self.registerHandler,
-    World            : worldConstructor
+    World            : worldConstructor,
+    when             : when
   };
 
   appendEventHandlers(supportCodeHelper, self);
@@ -4200,8 +4201,7 @@ require.define("/node_modules/when/when.js",function(require,module,exports,__di
  * @author John Hann
  * @version 2.5.1
  */
-(function(define, global) { 'use strict';
-define(function (require) {
+var global = this
 
 	// Public API
 
@@ -5111,8 +5111,6 @@ define(function (require) {
 	}
 
 	return when;
-});
-})(typeof define === 'function' && define.amd ? define : function (factory) { module.exports = factory(require); }, this);
 
 });
 

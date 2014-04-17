@@ -5109,7 +5109,8 @@ var global = this
 	function identity(x) {
 		return x;
 	}
-
+	if(typeof module == 'object')
+		module.exports = when
 	return when;
 
 });

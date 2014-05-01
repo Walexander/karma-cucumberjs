@@ -12,8 +12,8 @@ module.exports = function (grunt) {
 
       requirejs_dependencies: [
         '../vendor/cucumber.js',
-        '../vendor/jquery-1.10.1.min.js',
-        '../components/requirejs/require'
+        '../vendor/jquery-1.11.0.js',
+        '../components/requirejs/require',
       ],
 
       watch_js: ['./source/**/*.js']
@@ -59,7 +59,7 @@ module.exports = function (grunt) {
           baseUrl: './source',
           deps: "<%= files.requirejs_dependencies %>",
           name: 'main',
-          optimize: 'uglify2',
+          optimize: '',
           inlineText: false,
           isBuild: true,
           fileExclusionRegExp: /^\.|\.md$/,
